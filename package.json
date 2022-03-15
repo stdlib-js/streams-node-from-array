@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/streams-node-from-array",
-  "version": "0.0.6",
+  "version": "0.0.0",
   "description": "Create a readable stream from an array-like object.",
   "license": "Apache-2.0",
   "author": {
@@ -48,6 +48,7 @@
     "@stdlib/assert-is-string": "^0.0.x",
     "@stdlib/buffer-ctor": "^0.0.x",
     "@stdlib/buffer-from-string": "^0.0.x",
+    "@stdlib/string-format": "^0.0.x",
     "@stdlib/types": "^0.0.x",
     "@stdlib/utils-copy": "^0.0.x",
     "@stdlib/utils-define-nonenumerable-property": "^0.0.x",
