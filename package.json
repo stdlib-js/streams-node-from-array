@@ -1,0 +1,39 @@
+{
+  "name": "@stdlib/streams-node-from-array",
+  "version": "0.0.0",
+  "description": "Create a readable stream from an array-like object.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/streams-node-from-array.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "node",
+    "stream",
+    "streams",
+    "readable",
+    "array",
+    "array-like",
+    "typed array",
+    "typed",
+    "from",
+    "string",
+    "convert",
+    "to"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
