@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/streams-node-from-array",
-  "version": "0.0.0",
+  "version": "0.0.6",
   "description": "Create a readable stream from an array-like object.",
   "license": "Apache-2.0",
   "author": {
