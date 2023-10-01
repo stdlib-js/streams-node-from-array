@@ -61,7 +61,7 @@
   "devDependencies": {
     "@stdlib/array-float64": "^0.1.0",
     "@stdlib/bench": "^0.1.0",
-    "@stdlib/random-base-randu": "^0.0.8",
+    "@stdlib/random-base-randu": "^0.1.0",
     "@stdlib/streams-node-inspect-sink": "^0.1.0",
     "@stdlib/utils-parse-json": "^0.1.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
