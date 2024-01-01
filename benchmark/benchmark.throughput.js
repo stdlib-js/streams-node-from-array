@@ -21,7 +21,7 @@
 // MODULES //
 
 var WritableStream = require( 'readable-stream' ).Writable; // eslint-disable-line stdlib/no-redeclare
-var bench = require( '@stdlib/bench' );
+var bench = require( '@stdlib/bench-harness' );
 var inherit = require( '@stdlib/utils-inherit' );
 var nextTick = require( '@stdlib/utils-next-tick' );
 var pkg = require( './../package.json' ).name;
