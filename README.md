@@ -35,20 +35,30 @@ limitations under the License.
 
 > Create a [readable stream][readable-stream] from an array-like object.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/streams-node-from-array
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@esm/index.mjs';
+var arrayStream = require( '@stdlib/streams-node-from-array' );
 ```
 
 <a name="array-stream"></a>
@@ -58,7 +68,7 @@ import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strea
 Returns a [readable stream][readable-stream] from an array-like `object`.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@esm/index.mjs';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function log( chunk ) {
     console.log( chunk.toString() );
@@ -94,7 +104,7 @@ var stream = arrayStream( [ 1, 2, 3, 4 ], opts );
 By default, when not operating in [objectMode][object-mode], a returned [stream][stream] delineates individual values using a newline character. To specify an alternative separator, set the `sep` option.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@esm/index.mjs';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function log( chunk ) {
     console.log( chunk.toString() );
@@ -112,7 +122,7 @@ stream.pipe( iStream );
 By default, when not operating in [objectMode][object-mode], a returned [stream][stream] serializes values as JSON strings. To specify custom serialization behavior (either to a `string` or `Buffer`), set the `serialize` option.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@esm/index.mjs';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function serialize( v ) {
     return 'v::' + v.toString();
@@ -160,7 +170,7 @@ The method accepts the same `options` as [`arrayStream()`](#array-stream).
 This method is a convenience function to create [streams][stream] which **always** operate in [objectMode][object-mode].
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@esm/index.mjs';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function log( v ) {
     console.log( v );
@@ -203,16 +213,11 @@ This method accepts the same `options` as [`arrayStream()`](#array-stream); howe
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@esm/index.mjs';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@esm/index.mjs';
+```javascript
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-base-randu' );
+var Float64Array = require( '@stdlib/array-float64' );
+var arrayStream = require( '@stdlib/streams-node-from-array' );
 
 function log( v ) {
     console.log( v.toString() );
@@ -240,10 +245,6 @@ var iStream = inspectStream( opts, log );
 
 // Begin data flow:
 stream.pipe( iStream );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -275,7 +276,7 @@ stream.pipe( iStream );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -343,11 +344,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/streams/node/from-circular-array]: https://github.com/stdlib-js/streams-node-from-circular-array/tree/esm
+[@stdlib/streams/node/from-circular-array]: https://github.com/stdlib-js/streams-node-from-circular-array
 
-[@stdlib/streams/node/from-iterator]: https://github.com/stdlib-js/streams-node-from-iterator/tree/esm
+[@stdlib/streams/node/from-iterator]: https://github.com/stdlib-js/streams-node-from-iterator
 
-[@stdlib/streams/node/from-strided-array]: https://github.com/stdlib-js/streams-node-from-strided-array/tree/esm
+[@stdlib/streams/node/from-strided-array]: https://github.com/stdlib-js/streams-node-from-strided-array
 
 <!-- </related-links> -->
 
