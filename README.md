@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/streams-node-from-array/tags). For example,
+
+```javascript
 import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@v0.2.2-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@v0.2.2-deno/mod.js';
+import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@deno/mod.js';
 ```
 
 <a name="array-stream"></a>
@@ -207,7 +212,7 @@ This method accepts the same `options` as [`arrayStream()`](#array-stream); howe
 import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@v0.2.2-deno/mod.js';
+import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@deno/mod.js';
 
 function log( v ) {
     console.log( v.toString() );
