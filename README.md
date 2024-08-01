@@ -35,25 +35,32 @@ limitations under the License.
 
 > Create a [readable stream][readable-stream] from an array-like object.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/streams-node-from-array
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/streams-node-from-array/tags). For example,
-
-```javascript
-import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@v0.2.2-deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@deno/mod.js';
+var arrayStream = require( '@stdlib/streams-node-from-array' );
 ```
 
 <a name="array-stream"></a>
@@ -63,7 +70,7 @@ import { factory, objectMode } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strea
 Returns a [readable stream][readable-stream] from an array-like `object`.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function log( chunk ) {
     console.log( chunk.toString() );
@@ -99,7 +106,7 @@ var stream = arrayStream( [ 1, 2, 3, 4 ], opts );
 By default, when not operating in [objectMode][object-mode], a returned [stream][stream] delineates individual values using a newline character. To specify an alternative separator, set the `sep` option.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function log( chunk ) {
     console.log( chunk.toString() );
@@ -117,7 +124,7 @@ stream.pipe( iStream );
 By default, when not operating in [objectMode][object-mode], a returned [stream][stream] serializes values as JSON strings. To specify custom serialization behavior (either to a `string` or `Buffer`), set the `serialize` option.
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function serialize( v ) {
     return 'v::' + v.toString();
@@ -165,7 +172,7 @@ The method accepts the same `options` as [`arrayStream()`](#array-stream).
 This method is a convenience function to create [streams][stream] which **always** operate in [objectMode][object-mode].
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
 
 function log( v ) {
     console.log( v );
@@ -209,10 +216,10 @@ This method accepts the same `options` as [`arrayStream()`](#array-stream); howe
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import inspectStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-inspect-sink@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import arrayStream from 'https://cdn.jsdelivr.net/gh/stdlib-js/streams-node-from-array@deno/mod.js';
+var inspectStream = require( '@stdlib/streams-node-inspect-sink' );
+var randu = require( '@stdlib/random-base-randu' );
+var Float64Array = require( '@stdlib/array-float64' );
+var arrayStream = require( '@stdlib/streams-node-from-array' );
 
 function log( v ) {
     console.log( v.toString() );
@@ -271,7 +278,7 @@ stream.pipe( iStream );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -301,8 +308,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/streams-node-from-array.svg
 [npm-url]: https://npmjs.org/package/@stdlib/streams-node-from-array
 
-[test-image]: https://github.com/stdlib-js/streams-node-from-array/actions/workflows/test.yml/badge.svg?branch=v0.2.2
-[test-url]: https://github.com/stdlib-js/streams-node-from-array/actions/workflows/test.yml?query=branch:v0.2.2
+[test-image]: https://github.com/stdlib-js/streams-node-from-array/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/streams-node-from-array/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/streams-node-from-array/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/streams-node-from-array?branch=main
@@ -342,11 +349,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/streams/node/from-circular-array]: https://github.com/stdlib-js/streams-node-from-circular-array/tree/deno
+[@stdlib/streams/node/from-circular-array]: https://github.com/stdlib-js/streams-node-from-circular-array
 
-[@stdlib/streams/node/from-iterator]: https://github.com/stdlib-js/streams-node-from-iterator/tree/deno
+[@stdlib/streams/node/from-iterator]: https://github.com/stdlib-js/streams-node-from-iterator
 
-[@stdlib/streams/node/from-strided-array]: https://github.com/stdlib-js/streams-node-from-strided-array/tree/deno
+[@stdlib/streams/node/from-strided-array]: https://github.com/stdlib-js/streams-node-from-strided-array
 
 <!-- </related-links> -->
 
